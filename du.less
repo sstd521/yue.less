@@ -1,0 +1,118 @@
+/**!
+ * du.less - an extension for yue.less,supporting header number prefix.
+ * Copyright 2015 by LV.SAMA
+ */
+
+/* ==========================================================================
+   CSS 自动生成标题编号
+   ========================================================================== */
+
+/**
+ * 传统中文排版有『章』『节』『卷』『篇』『辑』『集』『部』等概念，
+ * 在网页排版中.yue.css 选取如下规则：
+ * 第1级--------章--------1
+ * 第2级--------节--------1.1
+ * 第3级--------节--------1.1.1
+ * 第4级--------节--------1.1.1.1
+ * -----------------------条--------1.
+ * -----------------------款--------1)
+ * -----------------------项--------(1)
+ * 所有标点均为西文标点
+ * 需要注意的是「条」比「章」后面多了「.」，「章」亦可用汉字代替，例如：「一、」
+ * Firefox 有私有属性分别实现简体和繁体的汉字编号，
+   -moz-simp-chinese-formal(大写)/-moz-simp-chinese-informal(小写)，
+   -moz-trad-chinese-formal(大写)/-moz-trad-chinese-informal(小写)，
+   参照：http://lists.w3.org/Archives/Public/public-html-ig-zh/2010Sep/0011.html
+   生成类似如下格式：
+
+   壹、章
+   ----壹之一、节
+   ----壹之二、节
+
+   贰、章
+   ----贰之一、节
+   ----贰之二、节
+   --------贰之二之一、节
+   --------贰之二之二、节
+
+ * @doc: 《科技文献的章节编号方法》（CY/T35-2001）
+ */
+
+/* --------------------------------------------------------------------------
+   标题自动生成编号
+   -------------------------------------------------------------------------- */
+/**
+ * 提供从h2-h4 三个级别的标题序号
+ * 最终生成如下格式编号：
+        1.
+        1.1
+        1.1.1
+ * 或者在容器上加上 class="cjk"
+ * 将生成如下格式编号：
+        一、
+        1.1
+        1.1.1
+ */
+
+.du {
+    counter-reset: chapter section subsection;
+    h2:before,
+    h3:before,
+    h4:before,
+    h5:before,
+    h6:before {
+        margin-right: .5em;
+        color: #888;
+    }
+
+    /**
+     * 一级标题（章）
+     * 输出 1
+     */
+    h2 {
+        counter-reset: section;
+
+        &:before {
+            content: counter(chapter);
+            counter-increment: chapter;
+        }
+    }
+    &.chs {
+        /**
+         * 一级标题(汉字)
+         * 输出 一、
+         */
+
+        h2 {
+            counter-increment: section;
+            &:before {
+                content: counter(chapter, cjk-ideographic)'、';
+                content: counter(chapter, cjk-cjk-decimal)'、';
+                margin-right: .25em;
+            }
+        }
+    }
+
+    /**
+     * 二级标题（节）
+     * 输出 1.1
+     */
+    h3 {
+        counter-reset: subsection;
+
+        &:before {
+            content: counter(chapter) "." counter(section);
+            counter-increment: section;
+        }
+    }
+
+    /**
+     * 三级标题（子节）
+     * 输出 1.1.1
+     */
+    h4:before {
+        content: counter(chapter) "." counter(section) "." counter(subsection);
+        counter-increment: subsection;
+    }
+
+}

@@ -1,0 +1,251 @@
+.yue {
+  font: @base-font-weight @base-font-size @base-font-family, sans-serif;
+  color: @base-color;
+  &::selection{
+    background-color: rgba(0,0,0,.2);
+  }
+
+  h1, h2, h3,h4,h5, h6 {
+    font-family: @base-font-family, "SimSun", sans-serif;
+    color: @emphasis-color;
+  }
+  h1 {
+    font-size: 1.8em;
+    margin: 0.67em 0;
+  }
+  > h1 {
+    margin-top: 0;
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+  }
+  h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+  }
+  h4,h5,h6 {
+    font-size: 1em;
+    margin: 1.6em 0 1em 0;
+  }
+  h6 {
+    font-weight: 500;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 1.46em;
+  }
+  a {
+    color: @link-color;
+    word-wrap: break-word;
+    text-decoration-color: rgba(0, 0, 0, 0.4);
+    &:hover{   
+      color: @link-hover-color;
+      text-decoration-color: rgba(0, 0, 0, 0.6);
+    }
+  }
+  strong,b {
+    font-weight: 700;
+    color: @emphasis-color;
+  }
+  em,i {
+    font-style: italic;
+    color: @emphasis-color;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    margin: 0.2em 0;
+  }
+  a img {
+    /* Remove border on IE */
+    border: none;
+  }
+  figure {
+    position: relative;
+    clear: both;
+    outline: 0;
+    margin: 10px 0 30px;
+    padding: 0;
+    min-height: 100px;
+    iframe {
+      margin:auto;
+    }
+    img{
+      display: block;
+      max-width: 100%;
+      margin: auto auto 4px;
+      box-sizing: border-box;
+    }
+    figcaption {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      left: 0;
+      margin-top: 10px;
+      font-weight: 400;
+      font-size: 14px;
+      color: @figure-color;
+      a {
+        text-decoration:none;
+        color:@figure-color;
+      }
+    }
+  }
+  hr {
+    display: block;
+    width: 14%;
+    margin: 40px auto 34px;
+    border: 0 none;
+    border-top: 3px solid #dededc;
+  }
+  blockquote {
+    margin: 0 0 1.64em 0;
+    border-left: 3px solid #dadada;
+    padding-left: 12px;
+    color: @blockquote-color;
+    a {
+      color: @blockquote-color;
+    }
+  }
+  ul,ol {
+    margin: 0 0 24px 6px;
+    padding-left: 16px;
+  }
+  ul {
+    list-style-type: square;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  li {
+    margin-bottom: 0.2em;
+  
+    ul,ol {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 14px;
+    }
+  
+    ul {
+      list-style-type: disc;
+    }
+  
+    ul ul {
+      list-style-type: circle;
+    }
+    p {
+     margin: 0.4em 0 0.6em;
+    }
+  }
+
+  .unstyled {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  code,tt {
+    color: @code-color;
+    font-size: 0.96em;
+    background-color: #f9f9f7;
+    padding: 1px 2px;
+    border: 1px solid #dadada;
+    border-radius: 3px;
+    font-family: @code-font-family, monospace;
+    word-wrap: break-word;
+  }
+  pre {
+    margin: 1.64em 0;
+    padding: 7px;
+    border: none;
+    border-left: 3px solid #dadada;
+    padding-left: 10px;
+    overflow: auto;
+    line-height: 1.5;
+    font-size: 0.96em;
+    font-family: @code-font-family, monospace;
+    color: @pre-code-color;
+    background-color: #f9f9f7;
+    code,tt {
+      color: @pre-code-color;
+      border: none;
+      background: none;
+      padding: 0;
+    }
+  }
+  table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 1.5em;
+    font-size: 0.96em;
+    box-sizing: border-box;
+    pre {
+      margin: 0;
+      padding: 0;
+      border: none;
+      background: none;
+    }
+  }  
+  th,td {
+    text-align: left;
+    padding: 4px 8px 4px 10px;
+    border: 1px solid #dadada;
+  } 
+  td {
+    vertical-align: top;
+  }
+  tr:nth-child(even) {
+    background-color: #efefee;
+  }
+  iframe {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+}
+.windows .yue {
+  font-size: 16px;
+  font-family: "Georgia", "SimSun", sans-serif;
+}
+@media (min-width: 1100px) {
+  .yue {
+    blockquote {
+      margin-left: -24px;
+      padding-left: 20px;
+      border-width: 4px;
+      blockquote {
+        margin-left:0;
+      }
+    }
+    figure {
+      img {
+        margin: 0 0 4px;
+      }
+      figcaption {
+        &:before {
+          width: 25%;
+          margin-left: 75%;
+          border-top: 1px solid #dededc;
+          display: block;
+          content: "";
+          margin-bottom: 10px;
+        }
+        position: absolute;
+        left: -172px;
+        width: 150px;
+        top: 0;
+        text-align: right;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .yue {
+    font-size: 16px;
+  }
+}

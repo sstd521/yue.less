@@ -1,4 +1,6 @@
-# yue.css
+# yue.less
+
+yue.less is a optimized less version of [yue.css](https://github.com/lepture/yue.css)
 
 **yue.css** is a typography stylesheet for readable content. It was
 created for my blog at first since I always designed a new theme for my
@@ -11,12 +13,7 @@ looking for a reset css, you are watching the wrong repository.
 
 ## Installation
 
-Install with [component(1)](http://component.io):
-
-    $ component install lepture/yue.css
-
-However, if you don't fancy component, you can just grab the css file
-from GitHub. There is no dependency of [this project](https://github.com/lepture/yue.css).
+Just grab the css file or the less file from [the yue.less GitHub project](https://github.com/uexim/yue.less.git). 
 
 ## API
 
@@ -66,13 +63,13 @@ are not designed for this purpose, you should always use `<strong>` and `<em>`.
 
 ### Links & Images
 
-Links are the soul of internet. [Fork it on GitHub](https://github.com/lepture/yue.css).
+Links are the soul of internet. [Fork it on GitHub](https://github.com/uexim/yue.css).
 
-[![art of human body](https://github-camo.global.ssl.fastly.net/4828f1a080d88c40be73f558e5951689b105b4f3/687474703a2f2f696d67332e646f7562616e2e636f6d2f766965772f70686f746f2f70686f746f2f7075626c69632f70313438373536333835302e6a7067)](http://www.douban.com/photos/photo/1487563850/)
+![art of human body](https://cdn.rawgit.com/uexim/yue.css/master/img/body-art.jpeg)
 
 Images can be wrappered in a `<figure>` tag:
 
-![human body](https://github-camo.global.ssl.fastly.net/9dd35e35cced3d2be53bfe42b5b250a0d17e47b9/687474703a2f2f696d67332e646f7562616e2e636f6d2f766965772f70686f746f2f70686f746f2f7075626c69632f70313438373536333931312e6a7067 "The Art of Human Body")
+![human body](https://cdn.rawgit.com/uexim/yue.css/master/img/body-art1.jpeg "The Art of Human Body")
 
 ### List
 
