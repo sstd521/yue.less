@@ -63,13 +63,13 @@ are not designed for this purpose, you should always use `<strong>` and `<em>`.
 
 ### Links & Images
 
-Links are the soul of internet. [Fork it on GitHub](https://github.com/uexim/yue.css).
+Links are the soul of internet. [Fork it on GitHub](https://github.com/uexim/yue.less).
 
-![art of human body](https://cdn.rawgit.com/uexim/yue.css/master/img/body-art.jpeg)
+![art of human body](https://cdn.rawgit.com/uexim/yue.less/master/img/body-art.jpeg)
 
 Images can be wrappered in a `<figure>` tag:
 
-![human body](https://cdn.rawgit.com/uexim/yue.css/master/img/body-art1.jpeg "The Art of Human Body")
+![human body](https://cdn.rawgit.com/uexim/yue.less/master/img/body-art1.jpeg "The Art of Human Body")
 
 ### List
 
