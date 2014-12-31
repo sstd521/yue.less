@@ -17,6 +17,8 @@ Just grab the css file or the less file from [the yue.less GitHub project](https
 
 ## API
 
+### The `.yue` class
+
 For readable content, wrapper them under the `.yue` class, and everything
 would be ok now:
 
@@ -26,6 +28,22 @@ would be ok now:
     <p>Paragraph of contents...</p>
 </div>
 ```
+
+### The `.du` class
+
+The `.du` class add SN prefix to your h(2-4) tags automatically.
+
+```css
+<div class="du">
+    <h1>Title</h1>
+    <h2>Chapter 1>
+    <h3>Section 1</h3>
+</div>
+```
+Click the link below to see the `.du` class's effect in action.
+
+[https://cdn.rawgit.com/uexim/yue.less/master/index.html?du](https://cdn.rawgit.com/uexim/yue.less/master/index.html?du)
+
 
 ## Tags
 
