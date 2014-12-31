@@ -21,10 +21,17 @@
     </style>
   </head>
   <body>
-    <div class="yue">
+    <div id="demo" class="yue">
         
         <%= content %>
     
     </div>
+
+    <script>
+if(location.search.indexOf('?du')===0){
+    document.getElementById('demo').className = 'yue du';
+}
+    </script>
+
 </body>
 </html>

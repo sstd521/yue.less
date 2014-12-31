@@ -21,7 +21,7 @@
     </style>
   </head>
   <body>
-    <div class="yue">
+    <div id="demo" class="yue">
         
         <h1 id="yue-less">yue.less</h1>
 <p>yue.less is a optimized less version of <a href="https://github.com/lepture/yue.css">yue.css</a></p>
@@ -159,5 +159,12 @@ for more information.</p>
 
     
     </div>
+
+    <script>
+if(location.search.indexOf('?du')===0){
+    document.getElementById('demo').className = 'yue du';
+}
+    </script>
+
 </body>
 </html>
