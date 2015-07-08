@@ -4,12 +4,10 @@
   "homepage": "https://github.com/mamboer/yue.less",
   "authors": "LV.SAMA",
   "description": "A stylesheet for readable content.ription",
-  "main": "["yue.min.css"]",
+  "main": ["yue.min.css"],
   "keywords": "CSS, framework, less, yue.less",
   "license": "MIT",
   "dependencies":{
-    "classor":"~1.0.0",
-    "Snap.svg":"*"    
   },
   "ignore": [
     "gulpfile.js",
@@ -28,7 +26,6 @@
     "test",
     "tests",
     "*.json",
-    "site",
-    "*.html"
+    "site"
   ]
 }

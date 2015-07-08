@@ -8,8 +8,6 @@
   "keywords": "@@keywords",
   "license": "MIT",
   "dependencies":{
-    "classor":"~1.0.0",
-    "Snap.svg":"*"    
   },
   "ignore": [
     "gulpfile.js",
@@ -28,7 +26,6 @@
     "test",
     "tests",
     "*.json",
-    "site",
-    "*.html"
+    "site"
   ]
 }
