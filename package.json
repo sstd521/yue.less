@@ -10,6 +10,7 @@
     "name": "LV.SAMA",
     "site": "http://faso.me"
   },
+  "main":["yue.min.css"],
   "license": [
     {
       "type": "MIT"
